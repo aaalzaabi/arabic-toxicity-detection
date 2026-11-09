@@ -1,0 +1,8 @@
+{
+  "n01": 108,
+  "n10": 30,
+  "statistic": 44.08695652173913,
+  "p_value": 1.5502098275003617e-11,
+  "method": "exact binomial McNemar test on binary toxic/non-toxic decisions",
+  "definition": "n01 = TF-IDF wrong and QARiB correct; n10 = TF-IDF correct and QARiB wrong. statistic is (n01-n10)^2/(n01+n10). p_value is the two-sided exact binomial test."
+}

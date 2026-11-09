@@ -1,0 +1,50 @@
+{
+  "frozen_at": "2026-11-08T18:16:06.059409+00:00",
+  "fingerprints": {
+    "outputs/models/tfidf_svm_multilabel.joblib": "6ee36f9f67d8a2fbce4344ca6e0cc6368cab5df0558b8f931e0a245d5d4db451",
+    "outputs/models/qarib/model.safetensors": "6e77ef12c8bda4f8ad0444ddab120f5fd67f9088e2bc82659924f9ef67efcb31",
+    "outputs/models/qarib/config.json": "bb0b5fb2c4e2e06b7900d9a15cc73bd5830407966afe9b7951056fe45769bf1f",
+    "outputs/models/qarib/tokenizer.json": "8285e761bcb1277d2522e562c2f1bc9b0d0b54ebe0ece2def444e6c778ca35d9",
+    "outputs/metrics/calibration.json": "ee0deb60788a13eadbc1c16d25f033823d576f1224d2d17338bffa58596832da",
+    "configs/data.yaml": "1883d272f24dd433a5df3595e5f4413a9958bcde11f537f7b676a2033a4350b8",
+    "configs/models.yaml": "b7aab067c9f321c5ddeb2eba038d988d2bca26bc019e2d1dcde57b3b65b2f42d"
+  },
+  "systems": [
+    {
+      "key": "svm_reported",
+      "system": "TF-IDF + Linear SVM",
+      "policy": "Reported cutoff"
+    },
+    {
+      "key": "svm_tuned",
+      "system": "TF-IDF + Linear SVM",
+      "policy": "Tuned per label"
+    },
+    {
+      "key": "qarib_reported",
+      "system": "QARiB",
+      "policy": "Reported cutoff"
+    },
+    {
+      "key": "qarib_tuned",
+      "system": "QARiB",
+      "policy": "Tuned per label"
+    },
+    {
+      "key": "ensemble_tuned",
+      "system": "Ensemble (TF-IDF + QARiB)",
+      "policy": "Tuned per label"
+    },
+    {
+      "key": "qarib_int8",
+      "system": "QARiB int8 (CPU)",
+      "policy": "Reported cutoff"
+    }
+  ],
+  "primary_system_key": "ensemble_tuned",
+  "primary_system": "Ensemble (calibrated, tuned cutoffs)",
+  "primary_selection_rule": "Highest Macro-F1 on validation; tuned systems use 5-fold cross-fitted estimates so the threshold search does not see the rows it is scored on.",
+  "reference_system_key": "svm_reported",
+  "jais": "Not included: Jais-2 has no validation run yet, so its prompt mode is not frozen. Score it on test separately after its validation run.",
+  "protocol": "Thresholds, calibration, ensemble weight and preprocessing were chosen on validation only. The test split is scored once."
+}

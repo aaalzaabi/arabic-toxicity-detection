@@ -1,0 +1,7 @@
+label,qarib_only_correct,tfidf_only_correct,both_correct,both_wrong
+Appearance,67,46,4792,51
+Cussing,64,57,4759,76
+Hatred,134,109,4570,143
+Racial,133,102,4573,148
+Sexual,35,26,4866,29
+Violence,50,38,4833,35

@@ -1,0 +1,46 @@
+{
+  "points": {
+    "highest_macro_f1": {
+      "threshold": 0.65,
+      "macro_f1": 0.9057691184999704,
+      "macro_precision": 0.9226487259171128,
+      "macro_recall": 0.8901601021355491,
+      "total_false_positives": 338,
+      "total_false_negatives": 489
+    },
+    "highest_macro_precision": {
+      "threshold": 0.8,
+      "macro_f1": 0.9038887170154406,
+      "macro_precision": 0.9346622114521412,
+      "macro_recall": 0.8764589540956091,
+      "total_false_positives": 273,
+      "total_false_negatives": 553
+    },
+    "lowest_false_positives": {
+      "threshold": 0.8,
+      "macro_f1": 0.9038887170154406,
+      "macro_precision": 0.9346622114521412,
+      "macro_recall": 0.8764589540956091,
+      "total_false_positives": 273,
+      "total_false_negatives": 553
+    },
+    "current": {
+      "threshold": 0.5,
+      "macro_f1": 0.9039231633021008,
+      "macro_precision": 0.9110830599935976,
+      "macro_recall": 0.8971694014553173,
+      "total_false_positives": 400,
+      "total_false_negatives": 460
+    }
+  },
+  "direction": {
+    "from_threshold": 0.3,
+    "to_threshold": 0.8,
+    "precision_change": 0.042193077545852886,
+    "recall_change": -0.03358608501520921,
+    "precision_increases": true,
+    "recall_decreases": true
+  },
+  "note": "Threshold selection depends on the intended moderation policy and the relative cost of false positives versus false negatives.",
+  "policy": "Different operating points reflect different policy choices."
+}

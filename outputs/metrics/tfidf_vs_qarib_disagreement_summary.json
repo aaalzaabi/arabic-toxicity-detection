@@ -1,0 +1,7 @@
+{
+  "n": 4956,
+  "both_correct": 3956,
+  "qarib_only_correct": 321,
+  "tfidf_only_correct": 219,
+  "both_wrong": 460
+}

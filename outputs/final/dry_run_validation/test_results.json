@@ -1,0 +1,455 @@
+{
+  "scored_at": "2026-11-08T18:17:31.882982+00:00",
+  "split": "validation",
+  "n": 4956,
+  "frozen_at": "2026-11-08T18:16:06.059409+00:00",
+  "primary_system": "Ensemble (TF-IDF + QARiB) (tuned per label)",
+  "systems": {
+    "svm_reported": {
+      "name": "TF-IDF + Linear SVM (reported cutoff)",
+      "multilabel": {
+        "macro_f1": 0.89091358617922,
+        "micro_f1": 0.9062469639560866,
+        "weighted_f1": 0.9062069679205249,
+        "hamming_loss": 0.03245224643529728,
+        "subset_accuracy": 0.8424132364810331,
+        "per_label": {
+          "Appearance": {
+            "precision": 0.9310344827586207,
+            "recall": 0.9025069637883009,
+            "f1": 0.9165487977369166,
+            "support": 718
+          },
+          "Cussing": {
+            "precision": 0.963855421686747,
+            "recall": 0.9385783298826778,
+            "f1": 0.951048951048951,
+            "support": 1449
+          },
+          "Hatred": {
+            "precision": 0.8557483731019523,
+            "recall": 0.8456591639871383,
+            "f1": 0.8506738544474394,
+            "support": 933
+          },
+          "Racial": {
+            "precision": 0.768695652173913,
+            "recall": 0.7491525423728813,
+            "f1": 0.7587982832618025,
+            "support": 590
+          },
+          "Sexual": {
+            "precision": 0.9767657992565055,
+            "recall": 0.9642201834862385,
+            "f1": 0.9704524469067405,
+            "support": 1090
+          },
+          "Violence": {
+            "precision": 0.9565217391304348,
+            "recall": 0.8461538461538461,
+            "f1": 0.8979591836734694,
+            "support": 442
+          }
+        }
+      },
+      "binary": {
+        "accuracy": 0.9711460855528652,
+        "macro_f1": 0.9651409713798653,
+        "toxic_f1": 0.9796092970198204,
+        "precision_toxic": 0.9910559723023659,
+        "recall_toxic": 0.9684240202988441
+      }
+    },
+    "svm_tuned": {
+      "name": "TF-IDF + Linear SVM (tuned per label)",
+      "multilabel": {
+        "macro_f1": 0.8935685974073623,
+        "micro_f1": 0.9085283310771611,
+        "weighted_f1": 0.908156955040695,
+        "hamming_loss": 0.03181329028786656,
+        "subset_accuracy": 0.8438256658595642,
+        "per_label": {
+          "Appearance": {
+            "precision": 0.9361393323657474,
+            "recall": 0.8983286908077994,
+            "f1": 0.9168443496801706,
+            "support": 718
+          },
+          "Cussing": {
+            "precision": 0.9600840336134454,
+            "recall": 0.9461697722567288,
+            "f1": 0.9530761209593326,
+            "support": 1449
+          },
+          "Hatred": {
+            "precision": 0.8429319371727748,
+            "recall": 0.8628081457663451,
+            "f1": 0.8527542372881356,
+            "support": 933
+          },
+          "Racial": {
+            "precision": 0.7955801104972375,
+            "recall": 0.7322033898305085,
+            "f1": 0.7625772285966461,
+            "support": 590
+          },
+          "Sexual": {
+            "precision": 0.9740740740740741,
+            "recall": 0.9651376146788991,
+            "f1": 0.9695852534562212,
+            "support": 1090
+          },
+          "Violence": {
+            "precision": 0.9247058823529412,
+            "recall": 0.8891402714932126,
+            "f1": 0.9065743944636678,
+            "support": 442
+          }
+        }
+      },
+      "binary": {
+        "accuracy": 0.9745762711864406,
+        "macro_f1": 0.9691406246911374,
+        "toxic_f1": 0.9820920977828311,
+        "precision_toxic": 0.9902550874175982,
+        "recall_toxic": 0.9740625881026219
+      }
+    },
+    "qarib_reported": {
+      "name": "QARiB (reported cutoff)",
+      "multilabel": {
+        "macro_f1": 0.9039231633021009,
+        "micro_f1": 0.9171802773497689,
+        "weighted_f1": 0.9167470094882094,
+        "hamming_loss": 0.0289211729889696,
+        "subset_accuracy": 0.8629943502824858,
+        "per_label": {
+          "Appearance": {
+            "precision": 0.9282758620689655,
+            "recall": 0.9373259052924791,
+            "f1": 0.9327789327789328,
+            "support": 718
+          },
+          "Cussing": {
+            "precision": 0.9569444444444445,
+            "recall": 0.9510006901311249,
+            "f1": 0.953963309103496,
+            "support": 1449
+          },
+          "Hatred": {
+            "precision": 0.8633938100320171,
+            "recall": 0.8670953912111469,
+            "f1": 0.8652406417112299,
+            "support": 933
+          },
+          "Racial": {
+            "precision": 0.8090909090909091,
+            "recall": 0.7542372881355932,
+            "f1": 0.7807017543859649,
+            "support": 590
+          },
+          "Sexual": {
+            "precision": 0.9787234042553191,
+            "recall": 0.9706422018348624,
+            "f1": 0.9746660525103639,
+            "support": 1090
+          },
+          "Violence": {
+            "precision": 0.9300699300699301,
+            "recall": 0.9027149321266968,
+            "f1": 0.9161882893226176,
+            "support": 442
+          }
+        }
+      },
+      "binary": {
+        "accuracy": 0.9868845843422115,
+        "macro_f1": 0.9839165582213454,
+        "toxic_f1": 0.9908256880733946,
+        "precision_toxic": 0.9920859242509893,
+        "recall_toxic": 0.989568649563011
+      }
+    },
+    "qarib_tuned": {
+      "name": "QARiB (tuned per label)",
+      "multilabel": {
+        "macro_f1": 0.9066138118309203,
+        "micro_f1": 0.9200620876988747,
+        "weighted_f1": 0.9196197520039776,
+        "hamming_loss": 0.027710519235942966,
+        "subset_accuracy": 0.8682405165456013,
+        "per_label": {
+          "Appearance": {
+            "precision": 0.9424157303370787,
+            "recall": 0.9345403899721448,
+            "f1": 0.9384615384615385,
+            "support": 718
+          },
+          "Cussing": {
+            "precision": 0.9682427664079041,
+            "recall": 0.9468599033816425,
+            "f1": 0.9574319609211445,
+            "support": 1449
+          },
+          "Hatred": {
+            "precision": 0.8743228602383532,
+            "recall": 0.864951768488746,
+            "f1": 0.8696120689655172,
+            "support": 933
+          },
+          "Racial": {
+            "precision": 0.8098720292504571,
+            "recall": 0.7508474576271187,
+            "f1": 0.7792436235708003,
+            "support": 590
+          },
+          "Sexual": {
+            "precision": 0.9814471243042672,
+            "recall": 0.9706422018348624,
+            "f1": 0.9760147601476015,
+            "support": 1090
+          },
+          "Violence": {
+            "precision": 0.9559902200488998,
+            "recall": 0.8846153846153846,
+            "f1": 0.918918918918919,
+            "support": 442
+          }
+        }
+      },
+      "binary": {
+        "accuracy": 0.9872881355932204,
+        "macro_f1": 0.9844378503132212,
+        "toxic_f1": 0.9910979228486647,
+        "precision_toxic": 0.9934844192634561,
+        "recall_toxic": 0.9887228643924443
+      }
+    },
+    "ensemble_tuned": {
+      "name": "Ensemble (TF-IDF + QARiB) (tuned per label)",
+      "multilabel": {
+        "macro_f1": 0.9137730463216389,
+        "micro_f1": 0.9256230529595015,
+        "weighted_f1": 0.9253661321886312,
+        "hamming_loss": 0.025692762980898575,
+        "subset_accuracy": 0.8753026634382567,
+        "per_label": {
+          "Appearance": {
+            "precision": 0.9570815450643777,
+            "recall": 0.9317548746518106,
+            "f1": 0.9442484121383204,
+            "support": 718
+          },
+          "Cussing": {
+            "precision": 0.974304068522484,
+            "recall": 0.9420289855072463,
+            "f1": 0.9578947368421052,
+            "support": 1449
+          },
+          "Hatred": {
+            "precision": 0.8931718061674009,
+            "recall": 0.8692390139335477,
+            "f1": 0.8810429114611624,
+            "support": 933
+          },
+          "Racial": {
+            "precision": 0.8209764918625678,
+            "recall": 0.7694915254237288,
+            "f1": 0.7944006999125109,
+            "support": 590
+          },
+          "Sexual": {
+            "precision": 0.9896616541353384,
+            "recall": 0.9660550458715597,
+            "f1": 0.9777158774373259,
+            "support": 1090
+          },
+          "Violence": {
+            "precision": 0.9458823529411765,
+            "recall": 0.9095022624434389,
+            "f1": 0.9273356401384083,
+            "support": 442
+          }
+        }
+      },
+      "binary": {
+        "accuracy": 0.9860774818401937,
+        "macro_f1": 0.9830058779513685,
+        "toxic_f1": 0.9902307801217612,
+        "precision_toxic": 0.9945961319681457,
+        "recall_toxic": 0.9859035804905554
+      }
+    },
+    "qarib_int8": {
+      "name": "QARiB int8 (CPU) (reported cutoff)",
+      "multilabel": {
+        "macro_f1": 0.8971622069017,
+        "micro_f1": 0.913563308506468,
+        "weighted_f1": 0.9117196235785002,
+        "hamming_loss": 0.029661016949152543,
+        "subset_accuracy": 0.857546408393866,
+        "per_label": {
+          "Appearance": {
+            "precision": 0.9711684370257967,
+            "recall": 0.8913649025069638,
+            "f1": 0.9295570079883806,
+            "support": 718
+          },
+          "Cussing": {
+            "precision": 0.95625,
+            "recall": 0.9503105590062112,
+            "f1": 0.9532710280373832,
+            "support": 1449
+          },
+          "Hatred": {
+            "precision": 0.8793296089385475,
+            "recall": 0.8435155412647374,
+            "f1": 0.8610503282275711,
+            "support": 933
+          },
+          "Racial": {
+            "precision": 0.8550420168067226,
+            "recall": 0.6898305084745763,
+            "f1": 0.7636022514071295,
+            "support": 590
+          },
+          "Sexual": {
+            "precision": 0.9630297565374211,
+            "recall": 0.9798165137614679,
+            "f1": 0.9713506139154161,
+            "support": 1090
+          },
+          "Violence": {
+            "precision": 0.9478908188585607,
+            "recall": 0.8642533936651584,
+            "f1": 0.9041420118343195,
+            "support": 442
+          }
+        }
+      },
+      "binary": {
+        "accuracy": 0.9828490718321227,
+        "macro_f1": 0.979152115766283,
+        "toxic_f1": 0.9879312792843958,
+        "precision_toxic": 0.995137299771167,
+        "recall_toxic": 0.9808288694671553
+      }
+    }
+  },
+  "bootstrap_vs_reference": [
+    {
+      "system": "TF-IDF + Linear SVM (reported cutoff)",
+      "macro_f1": 0.89091358617922,
+      "macro_f1_ci_low": 0.883168289240745,
+      "macro_f1_ci_high": 0.8985348337797906,
+      "micro_f1": 0.9062469639560866,
+      "micro_f1_ci_low": 0.9000089539624013,
+      "micro_f1_ci_high": 0.9125710794478321,
+      "macro_f1_diff_vs_reference": NaN,
+      "diff_ci_low": NaN,
+      "diff_ci_high": NaN,
+      "share_of_resamples_not_better": NaN
+    },
+    {
+      "system": "TF-IDF + Linear SVM (tuned per label)",
+      "macro_f1": 0.8935685974073623,
+      "macro_f1_ci_low": 0.8862762568017483,
+      "macro_f1_ci_high": 0.9008495379670513,
+      "micro_f1": 0.9085283310771611,
+      "micro_f1_ci_low": 0.9026015132225856,
+      "micro_f1_ci_high": 0.9148448391726784,
+      "macro_f1_diff_vs_reference": 0.0026550112281422678,
+      "diff_ci_low": -0.0004986758247374932,
+      "diff_ci_high": 0.0057185745481657555,
+      "share_of_resamples_not_better": 0.0465
+    },
+    {
+      "system": "QARiB (reported cutoff)",
+      "macro_f1": 0.9039231633021009,
+      "macro_f1_ci_low": 0.8963379953824429,
+      "macro_f1_ci_high": 0.9114534078112719,
+      "micro_f1": 0.9171802773497689,
+      "micro_f1_ci_low": 0.9108329448743265,
+      "micro_f1_ci_high": 0.9235104403134339,
+      "macro_f1_diff_vs_reference": 0.013009577122880867,
+      "diff_ci_low": 0.005880070434281562,
+      "diff_ci_high": 0.02020852795798022,
+      "share_of_resamples_not_better": 0.0
+    },
+    {
+      "system": "QARiB (tuned per label)",
+      "macro_f1": 0.9066138118309203,
+      "macro_f1_ci_low": 0.8991807527526521,
+      "macro_f1_ci_high": 0.9141884800023471,
+      "micro_f1": 0.9200620876988747,
+      "micro_f1_ci_low": 0.9139228319551953,
+      "micro_f1_ci_high": 0.9264665014931881,
+      "macro_f1_diff_vs_reference": 0.01570022565170026,
+      "diff_ci_low": 0.009009143732172408,
+      "diff_ci_high": 0.022981712449503904,
+      "share_of_resamples_not_better": 0.0
+    },
+    {
+      "system": "Ensemble (TF-IDF + QARiB) (tuned per label)",
+      "macro_f1": 0.9137730463216389,
+      "macro_f1_ci_low": 0.9067983804084324,
+      "macro_f1_ci_high": 0.9207081048277657,
+      "micro_f1": 0.9256230529595015,
+      "micro_f1_ci_low": 0.9199295053805848,
+      "micro_f1_ci_high": 0.9313557526203138,
+      "macro_f1_diff_vs_reference": 0.022859460142418908,
+      "diff_ci_low": 0.01713891647780879,
+      "diff_ci_high": 0.028730877494728267,
+      "share_of_resamples_not_better": 0.0
+    },
+    {
+      "system": "QARiB int8 (CPU) (reported cutoff)",
+      "macro_f1": 0.8971622069017,
+      "macro_f1_ci_low": 0.8892779385674191,
+      "macro_f1_ci_high": 0.9049242873657428,
+      "micro_f1": 0.913563308506468,
+      "micro_f1_ci_low": 0.9073926185982518,
+      "micro_f1_ci_high": 0.9196938759579594,
+      "macro_f1_diff_vs_reference": 0.006248620722480003,
+      "diff_ci_low": -0.0008523675367177045,
+      "diff_ci_high": 0.013622858202205617,
+      "share_of_resamples_not_better": 0.0425
+    }
+  ],
+  "primary_vs_qarib": [
+    {
+      "system": "Ensemble (TF-IDF + QARiB) (tuned per label)",
+      "macro_f1": 0.9137730463216389,
+      "macro_f1_ci_low": 0.9067983804084324,
+      "macro_f1_ci_high": 0.9207081048277657,
+      "micro_f1": 0.9256230529595015,
+      "micro_f1_ci_low": 0.9199295053805848,
+      "micro_f1_ci_high": 0.9313557526203138,
+      "macro_f1_diff_vs_reference": 0.009849883019538042,
+      "diff_ci_low": 0.00560919630035607,
+      "diff_ci_high": 0.013963436814061831,
+      "share_of_resamples_not_better": 0.0
+    },
+    {
+      "system": "QARiB (reported cutoff)",
+      "macro_f1": 0.9039231633021009,
+      "macro_f1_ci_low": 0.8963379953824429,
+      "macro_f1_ci_high": 0.9114534078112719,
+      "micro_f1": 0.9171802773497689,
+      "micro_f1_ci_low": 0.9108329448743265,
+      "micro_f1_ci_high": 0.9235104403134339,
+      "macro_f1_diff_vs_reference": NaN,
+      "diff_ci_low": NaN,
+      "diff_ci_high": NaN,
+      "share_of_resamples_not_better": NaN
+    }
+  ],
+  "expected_calibration_error": {
+    "TF-IDF scaled score (uncalibrated)": 0.2062548327281415,
+    "TF-IDF calibrated": 0.00429645751483796,
+    "QARiB sigmoid (uncalibrated)": 0.017266765413654257,
+    "QARiB calibrated": 0.006712830561191946,
+    "Ensemble calibrated": 0.009624324250662758
+  },
+  "jais": "Not included: Jais-2 has no validation run yet, so its prompt mode is not frozen. Score it on test separately after its validation run."
+}

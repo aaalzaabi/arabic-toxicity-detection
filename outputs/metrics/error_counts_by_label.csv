@@ -1,0 +1,7 @@
+label,tfidf_false_positives,qarib_false_positives,tfidf_false_negatives,qarib_false_negatives
+Appearance,48,52,70,45
+Cussing,51,62,89,71
+Hatred,133,128,144,124
+Racial,133,105,148,145
+Sexual,25,23,39,32
+Violence,17,30,68,43

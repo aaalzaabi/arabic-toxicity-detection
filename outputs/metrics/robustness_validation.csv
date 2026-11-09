@@ -1,0 +1,25 @@
+system,perturbation,macro_f1,binary_flip_rate,label_set_change_rate,normalization_undoes_it,n,macro_f1_change
+TF-IDF + Linear SVM (reported cutoff),Original,0.8911948389308995,0.0,0.0,True,1000,0.0
+TF-IDF + Linear SVM (reported cutoff),Diacritics added,0.8911948389308995,0.0,0.0,True,1000,0.0
+TF-IDF + Linear SVM (reported cutoff),Tatweel (ـ) added,0.8911948389308995,0.0,0.0,True,1000,0.0
+TF-IDF + Linear SVM (reported cutoff),Elongated letters,0.795761046971928,0.109,0.224,False,1000,-0.0954337919589715
+TF-IDF + Linear SVM (reported cutoff),Emoji appended,0.8897876012315887,0.002,0.007,False,1000,-0.001407237699310726
+TF-IDF + Linear SVM (reported cutoff),English words mixed in,0.8910488878535766,0.0,0.002,False,1000,-0.00014595107732284784
+TF-IDF + Linear SVM (reported cutoff),Typos (swap/drop),0.8213852058696398,0.074,0.173,False,1000,-0.06980963306125965
+TF-IDF + Linear SVM (reported cutoff),Arabizi (Latin script),0.013550135501355013,0.685,0.69,False,1000,-0.8776447034295445
+QARiB (reported cutoff),Original,0.8997324974290505,0.0,0.0,True,1000,0.0
+QARiB (reported cutoff),Diacritics added,0.8997324974290505,0.0,0.0,True,1000,0.0
+QARiB (reported cutoff),Tatweel (ـ) added,0.8997324974290505,0.0,0.0,True,1000,0.0
+QARiB (reported cutoff),Elongated letters,0.8183613794754323,0.046,0.205,False,1000,-0.08137111795361818
+QARiB (reported cutoff),Emoji appended,0.9002669577296355,0.001,0.006,False,1000,0.0005344603005850157
+QARiB (reported cutoff),English words mixed in,0.9028399993912276,0.004,0.022,False,1000,0.0031075019621771283
+QARiB (reported cutoff),Typos (swap/drop),0.8374419496424864,0.035,0.143,False,1000,-0.062290547786564066
+QARiB (reported cutoff),Arabizi (Latin script),0.002824858757062147,0.705,0.708,False,1000,-0.8969076386719883
+Ensemble (TF-IDF + QARiB) (tuned per label),Original,0.9090792473604002,0.0,0.0,True,1000,0.0
+Ensemble (TF-IDF + QARiB) (tuned per label),Diacritics added,0.9090792473604002,0.0,0.0,True,1000,0.0
+Ensemble (TF-IDF + QARiB) (tuned per label),Tatweel (ـ) added,0.9090792473604002,0.0,0.0,True,1000,0.0
+Ensemble (TF-IDF + QARiB) (tuned per label),Elongated letters,0.8268019279298624,0.059,0.207,False,1000,-0.08227731943053784
+Ensemble (TF-IDF + QARiB) (tuned per label),Emoji appended,0.9094000976829504,0.001,0.004,False,1000,0.0003208503225501369
+Ensemble (TF-IDF + QARiB) (tuned per label),English words mixed in,0.9063927180951269,0.008,0.021,False,1000,-0.002686529265273352
+Ensemble (TF-IDF + QARiB) (tuned per label),Typos (swap/drop),0.8425554508425627,0.051,0.159,False,1000,-0.06652379651783757
+Ensemble (TF-IDF + QARiB) (tuned per label),Arabizi (Latin script),0.0,0.703,0.703,False,1000,-0.9090792473604002

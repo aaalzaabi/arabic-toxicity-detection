@@ -1,0 +1,104 @@
+{
+  "frozen_at": "2026-11-09T10:18:12.126480+00:00",
+  "chosen_mode": "zeroshot",
+  "chosen_name": "Jais-2 zero-shot",
+  "rule": "Higher Macro-F1 on the first 500 validation rows; parse failures count as no label.",
+  "validation": {
+    "zeroshot": {
+      "n": 500,
+      "parse_failure_rate": 0.016,
+      "macro_f1": 0.3693405138590764,
+      "micro_f1": 0.4726027397260274,
+      "macro_f1_parsed_rows_only": 0.37280339070313984,
+      "binary_macro_f1": 0.6152551339393064,
+      "mean_latency_seconds": 2.6968991998359377,
+      "median_latency_seconds": 2.6371504580001783,
+      "per_label": {
+        "Appearance": {
+          "precision": 0.5,
+          "recall": 0.028985507246376812,
+          "f1": 0.0547945205479452,
+          "support": 69
+        },
+        "Cussing": {
+          "precision": 0.6962025316455697,
+          "recall": 0.7051282051282052,
+          "f1": 0.7006369426751592,
+          "support": 156
+        },
+        "Hatred": {
+          "precision": 0.33766233766233766,
+          "recall": 0.30952380952380953,
+          "f1": 0.32298136645962733,
+          "support": 84
+        },
+        "Racial": {
+          "precision": 0.42857142857142855,
+          "recall": 0.2033898305084746,
+          "f1": 0.27586206896551724,
+          "support": 59
+        },
+        "Sexual": {
+          "precision": 1.0,
+          "recall": 0.4205607476635514,
+          "f1": 0.5921052631578947,
+          "support": 107
+        },
+        "Violence": {
+          "precision": 0.2926829268292683,
+          "recall": 0.25,
+          "f1": 0.2696629213483146,
+          "support": 48
+        }
+      }
+    },
+    "fewshot": {
+      "n": 500,
+      "parse_failure_rate": 0.006,
+      "macro_f1": 0.1287708008675084,
+      "micro_f1": 0.18152350081037277,
+      "macro_f1_parsed_rows_only": 0.129372051468759,
+      "binary_macro_f1": 0.3588546529723,
+      "mean_latency_seconds": 4.275229493153991,
+      "median_latency_seconds": 3.4594357084997682,
+      "per_label": {
+        "Appearance": {
+          "precision": 0.3333333333333333,
+          "recall": 0.043478260869565216,
+          "f1": 0.07692307692307693,
+          "support": 69
+        },
+        "Cussing": {
+          "precision": 0.8333333333333334,
+          "recall": 0.22435897435897437,
+          "f1": 0.35353535353535354,
+          "support": 156
+        },
+        "Hatred": {
+          "precision": 0.14285714285714285,
+          "recall": 0.023809523809523808,
+          "f1": 0.04081632653061224,
+          "support": 84
+        },
+        "Racial": {
+          "precision": 0.3333333333333333,
+          "recall": 0.05084745762711865,
+          "f1": 0.08823529411764706,
+          "support": 59
+        },
+        "Sexual": {
+          "precision": 0.8666666666666667,
+          "recall": 0.12149532710280374,
+          "f1": 0.21311475409836064,
+          "support": 107
+        },
+        "Violence": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 48
+        }
+      }
+    }
+  }
+}

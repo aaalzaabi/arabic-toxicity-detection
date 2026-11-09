@@ -1,0 +1,10 @@
+dialect:
+  enabled: true
+  model_name: "CAMeL-Lab/bert-base-arabic-camelbert-mix-did-nadi"
+  max_length: 128
+  batch_size: 32
+  low_arabic_ratio_threshold: 0.40
+
+dialect_analysis:
+  minimum_group_size_for_plot: 20
+  toxicity_prefix: "qarib"

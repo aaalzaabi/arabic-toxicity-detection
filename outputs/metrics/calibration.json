@@ -1,0 +1,120 @@
+{
+  "fitted_on": "validation",
+  "labels": [
+    "Appearance",
+    "Cussing",
+    "Hatred",
+    "Racial",
+    "Sexual",
+    "Violence"
+  ],
+  "svm": {
+    "score_input": "decision_function",
+    "platt": [
+      [
+        4.615950707008322,
+        -0.29762092019473857
+      ],
+      [
+        4.958261880118623,
+        0.04149710911367033
+      ],
+      [
+        3.748407749175912,
+        -0.413370472915541
+      ],
+      [
+        3.274555369706481,
+        -0.6275012247528736
+      ],
+      [
+        5.271062988651611,
+        -0.017832475059044145
+      ],
+      [
+        4.989202840467979,
+        0.28578217628856334
+      ]
+    ],
+    "thresholds_tuned": [
+      0.45,
+      0.45,
+      0.35,
+      0.4,
+      0.45,
+      0.35
+    ]
+  },
+  "qarib": {
+    "score_input": "logit(sigmoid probability)",
+    "platt": [
+      [
+        0.7994556719035492,
+        -0.567884521636165
+      ],
+      [
+        0.752537126030487,
+        -0.28274694604794803
+      ],
+      [
+        0.6409410688255179,
+        -0.47451145840635556
+      ],
+      [
+        0.6058600371015032,
+        -0.43182832989233233
+      ],
+      [
+        0.8658256901772725,
+        -0.33130993620235644
+      ],
+      [
+        0.7882012390633301,
+        -0.42355787758652574
+      ]
+    ],
+    "thresholds_tuned": [
+      0.5,
+      0.6,
+      0.45,
+      0.4,
+      0.5,
+      0.7
+    ]
+  },
+  "ensemble": {
+    "weight": 0.5,
+    "description": "weight * calibrated TF-IDF + (1 - weight) * calibrated QARiB",
+    "thresholds_tuned": [
+      0.5,
+      0.55,
+      0.45,
+      0.4,
+      0.6,
+      0.45
+    ]
+  },
+  "cross_fitted_validation_macro_f1": {
+    "TF-IDF + Linear SVM (reported cutoff)": 0.89091358617922,
+    "QARiB (reported 0.50)": 0.9039231633021009,
+    "TF-IDF + Linear SVM (calibrated, tuned cutoffs)": 0.8866829408084319,
+    "QARiB (calibrated, tuned cutoffs)": 0.9031100904394945,
+    "Ensemble (calibrated, tuned cutoffs)": 0.9101775952385704
+  },
+  "selected_system_key": "ensemble_tuned",
+  "selected_system": "Ensemble (calibrated, tuned cutoffs)",
+  "selection_rule": "Highest Macro-F1 on validation; tuned systems use 5-fold cross-fitted estimates so the threshold search does not see the rows it is scored on.",
+  "qarib_vs_tfidf_validation": {
+    "system": "QARiB (reported 0.50)",
+    "macro_f1": 0.9039231633021009,
+    "macro_f1_ci_low": 0.8963379953824429,
+    "macro_f1_ci_high": 0.9114534078112719,
+    "micro_f1": 0.9171802773497689,
+    "micro_f1_ci_low": 0.9108329448743265,
+    "micro_f1_ci_high": 0.9235104403134339,
+    "macro_f1_diff_vs_reference": 0.013009577122880867,
+    "diff_ci_low": 0.005880070434281562,
+    "diff_ci_high": 0.02020852795798022,
+    "share_of_resamples_not_better": 0.0
+  }
+}

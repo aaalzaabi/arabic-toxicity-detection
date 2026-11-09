@@ -1,0 +1,23 @@
+svm:
+  word_ngram_min: 1
+  word_ngram_max: 3
+  char_ngram_min: 2
+  char_ngram_max: 5
+  min_df: 2
+  class_weight: "balanced"
+
+qarib:
+  model_name: "ahmedabdelali/bert-base-qarib"
+  max_length: 192
+  batch_size: 16
+  epochs: 4
+  learning_rate: 0.00002
+  weight_decay: 0.01
+  threshold: 0.5
+  seed: 42
+
+jais:
+  model_name: "inception42/Jais-2-8B-Chat"
+  max_new_tokens: 180
+  temperature: 0.0
+  few_shot_examples: 3

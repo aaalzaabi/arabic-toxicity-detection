@@ -1,0 +1,26 @@
+{
+  "Appearance": {
+    "threshold": 0.6500000000000001,
+    "validation_f1": 0.9378057302585604
+  },
+  "Cussing": {
+    "threshold": 0.8000000000000003,
+    "validation_f1": 0.9568874868559412
+  },
+  "Hatred": {
+    "threshold": 0.7000000000000002,
+    "validation_f1": 0.8697547683923705
+  },
+  "Racial": {
+    "threshold": 0.5000000000000001,
+    "validation_f1": 0.7807017543859649
+  },
+  "Sexual": {
+    "threshold": 0.6000000000000002,
+    "validation_f1": 0.9760147601476015
+  },
+  "Violence": {
+    "threshold": 0.8000000000000003,
+    "validation_f1": 0.9192982456140351
+  }
+}

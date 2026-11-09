@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+# data and anything that contains comment text
+data/raw/*
+data/processed/*.csv
+outputs/models/*
+outputs/predictions/*
+outputs/errors/*
+outputs/reviews/*
+outputs/ethics/*
+!outputs/ethics/false_positive_summary.csv
+!outputs/ethics/false_positive_by_predicted_region.csv
+!outputs/ethics/qarib_operating_modes.csv
+!outputs/ethics/qarib_operating_points.json
+!outputs/ethics/qarib_threshold_tradeoff.csv
+!outputs/ethics/qarib_threshold_tradeoff_per_label.csv
+outputs/final/dry_run_validation/*.csv
+outputs/final/invalid_first500_test/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!outputs/models/.gitkeep
+!outputs/predictions/.gitkeep
+!outputs/errors/.gitkeep
+!outputs/reviews/.gitkeep
+# local backups; git history replaces them
+backups/

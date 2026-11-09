@@ -1,0 +1,4 @@
+mode,threshold,macro_f1,macro_precision,macro_recall,false_positives,false_negatives,subset_accuracy,interpretation
+Reported / Balanced,0.5,0.9039231633021008,0.9110830599935976,0.8971694014553173,400,460,0.8629943502824858,Preserve the originally reported validation evaluation.
+F1-focused exploratory,0.65,0.9057691184999704,0.9226487259171128,0.8901601021355491,338,489,0.867231638418079,Highest Macro-F1 observed on the current validation threshold grid.
+Precision-focused review,0.8,0.9038887170154406,0.9346622114521412,0.8764589540956091,273,553,0.8676351896690879,Reduce false positives and favor precision at the cost of recall.

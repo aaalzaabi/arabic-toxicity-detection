@@ -1,0 +1,21 @@
+dataset:
+  hf_id: "Alshargi/Aratox"
+  text_column: "Text"
+  dialect_column: null
+  not_label: "NOT"
+  toxicity_labels: ["Appearance", "Cussing", "Hatred", "Racial", "Sexual", "Violence"]
+
+split:
+  validation_size: 0.15
+  seed: 42
+  preserve_official_test: true
+
+preprocessing:
+  remove_urls: true
+  remove_usernames: true
+  remove_diacritics: true
+  remove_tatweel: true
+  normalize_alef: true
+  normalize_yeh: false
+  normalize_ta_marbuta: false
+  collapse_whitespace: true

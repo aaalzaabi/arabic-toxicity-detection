@@ -1,0 +1,55 @@
+{
+  "splits": {
+    "train": {
+      "rows": 28082,
+      "binary_toxic": 20098,
+      "binary_non_toxic": 7984,
+      "normalized_duplicate_rows": 85,
+      "label_counts": {
+        "Appearance": 3989,
+        "Cussing": 8099,
+        "Hatred": 5330,
+        "Racial": 3491,
+        "Sexual": 6183,
+        "Violence": 2373
+      },
+      "not_consistency_flags": 0
+    },
+    "validation": {
+      "rows": 4956,
+      "binary_toxic": 3547,
+      "binary_non_toxic": 1409,
+      "normalized_duplicate_rows": 5,
+      "label_counts": {
+        "Appearance": 718,
+        "Cussing": 1449,
+        "Hatred": 933,
+        "Racial": 590,
+        "Sexual": 1090,
+        "Violence": 442
+      },
+      "not_consistency_flags": 0
+    },
+    "test": {
+      "rows": 3670,
+      "binary_toxic": 2638,
+      "binary_non_toxic": 1032,
+      "normalized_duplicate_rows": 2,
+      "label_counts": {
+        "Appearance": 498,
+        "Cussing": 1074,
+        "Hatred": 700,
+        "Racial": 434,
+        "Sexual": 867,
+        "Violence": 308
+      },
+      "not_consistency_flags": 0
+    }
+  },
+  "overlap": {
+    "train_validation": 27,
+    "train_test": 12,
+    "validation_test": 6
+  },
+  "dialect_column": null
+}
