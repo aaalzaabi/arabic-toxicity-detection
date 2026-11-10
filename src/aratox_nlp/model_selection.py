@@ -30,8 +30,9 @@ THRESHOLD_RESEARCH_QUESTION = (
     "How do different decision thresholds change the trade-off between false positives and missed toxic content?"
 )
 JAIS_STATUS = (
-    "Jais-2-8B-Chat: integrated / evaluation pending. It is not included in this scorecard "
-    "because a full validation evaluation is not available."
+    "Jais-2-8B-Chat (zero-shot prompt, no training) was evaluated separately: Macro-F1 0.369 on 500 validation "
+    "comments and 0.346 on the full test split. It is not in this scorecard, which compares the trained models; "
+    "see the Final Results tab."
 )
 SCENARIO_GUIDANCE = (
     "If predictive performance is the main priority:\n"

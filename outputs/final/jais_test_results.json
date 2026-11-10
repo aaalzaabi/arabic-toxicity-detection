@@ -1,0 +1,147 @@
+{
+  "scored_at": "2026-11-10T08:23:01.241634+00:00",
+  "mode": "Jais-2 zero-shot",
+  "n": 3670,
+  "subset": "Full held-out test split (3,670 rows); every system is compared on these same rows. An earlier run on the first 500 test rows was invalid (the test file is ordered by label) and is kept in outputs/final/invalid_first500_test/.",
+  "jais": {
+    "n": 3670,
+    "parse_failure_rate": 0.006539509536784741,
+    "macro_f1": 0.3461499713309441,
+    "micro_f1": 0.455969915387026,
+    "macro_f1_parsed_rows_only": 0.3472622423362884,
+    "binary_macro_f1": 0.6185326525960665,
+    "mean_latency_seconds": 3.0363736192531006,
+    "median_latency_seconds": 2.763697291500648,
+    "per_label": {
+      "Appearance": {
+        "precision": 0.32,
+        "recall": 0.01606425702811245,
+        "f1": 0.030592734225621414,
+        "support": 498
+      },
+      "Cussing": {
+        "precision": 0.6451335055986219,
+        "recall": 0.6973929236499069,
+        "f1": 0.6702460850111857,
+        "support": 1074
+      },
+      "Hatred": {
+        "precision": 0.423728813559322,
+        "recall": 0.32142857142857145,
+        "f1": 0.3655564581640942,
+        "support": 700
+      },
+      "Racial": {
+        "precision": 0.4463276836158192,
+        "recall": 0.18202764976958524,
+        "f1": 0.25859247135842883,
+        "support": 434
+      },
+      "Sexual": {
+        "precision": 0.9713467048710601,
+        "recall": 0.39100346020761245,
+        "f1": 0.5575657894736842,
+        "support": 867
+      },
+      "Violence": {
+        "precision": 0.2131782945736434,
+        "recall": 0.17857142857142858,
+        "f1": 0.19434628975265017,
+        "support": 308
+      }
+    }
+  },
+  "comparison_same_rows": [
+    {
+      "system": "Jais-2 zero-shot",
+      "macro_f1": 0.3461499713309441,
+      "macro_f1_ci_low": 0.33305039465836894,
+      "macro_f1_ci_high": 0.35929139442436886,
+      "micro_f1": 0.455969915387026,
+      "micro_f1_ci_low": 0.44149330859830843,
+      "micro_f1_ci_high": 0.47003538516685917,
+      "macro_f1_diff_vs_reference": NaN,
+      "diff_ci_low": NaN,
+      "diff_ci_high": NaN,
+      "share_of_resamples_not_better": NaN
+    },
+    {
+      "system": "TF-IDF + Linear SVM (reported cutoff)",
+      "macro_f1": 0.9035531549144107,
+      "macro_f1_ci_low": 0.8951360185061455,
+      "macro_f1_ci_high": 0.9116614851503199,
+      "micro_f1": 0.9119103466249674,
+      "micro_f1_ci_low": 0.9043912687345138,
+      "micro_f1_ci_high": 0.9189432889249584,
+      "macro_f1_diff_vs_reference": 0.5574031835834665,
+      "diff_ci_low": 0.5411722205254553,
+      "diff_ci_high": 0.5727820858118311,
+      "share_of_resamples_not_better": 0.0
+    },
+    {
+      "system": "TF-IDF + Linear SVM (tuned per label)",
+      "macro_f1": 0.8985893284356096,
+      "macro_f1_ci_low": 0.8899884667571972,
+      "macro_f1_ci_high": 0.906697561134327,
+      "micro_f1": 0.9097033294468195,
+      "micro_f1_ci_low": 0.9025117704827129,
+      "micro_f1_ci_high": 0.9166568357683307,
+      "macro_f1_diff_vs_reference": 0.5524393571046655,
+      "diff_ci_low": 0.5364089712801118,
+      "diff_ci_high": 0.5676078704076869,
+      "share_of_resamples_not_better": 0.0
+    },
+    {
+      "system": "QARiB (reported cutoff)",
+      "macro_f1": 0.9138116843749496,
+      "macro_f1_ci_low": 0.9061797072360415,
+      "macro_f1_ci_high": 0.9218242617053698,
+      "micro_f1": 0.9221679938350886,
+      "micro_f1_ci_low": 0.9153187277336102,
+      "micro_f1_ci_high": 0.9293642910540445,
+      "macro_f1_diff_vs_reference": 0.5676617130440056,
+      "diff_ci_low": 0.5520508558474966,
+      "diff_ci_high": 0.5828119405355972,
+      "share_of_resamples_not_better": 0.0
+    },
+    {
+      "system": "QARiB (tuned per label)",
+      "macro_f1": 0.915303373469536,
+      "macro_f1_ci_low": 0.907462073866437,
+      "macro_f1_ci_high": 0.9234532578778675,
+      "micro_f1": 0.9244133281472838,
+      "micro_f1_ci_low": 0.9176600371273965,
+      "micro_f1_ci_high": 0.9315544340177913,
+      "macro_f1_diff_vs_reference": 0.569153402138592,
+      "diff_ci_low": 0.5528901026070819,
+      "diff_ci_high": 0.5846989519238637,
+      "share_of_resamples_not_better": 0.0
+    },
+    {
+      "system": "Ensemble (TF-IDF + QARiB) (tuned per label)",
+      "macro_f1": 0.9206480020315085,
+      "macro_f1_ci_low": 0.9127649428087673,
+      "macro_f1_ci_high": 0.9281828084759006,
+      "micro_f1": 0.927547563200417,
+      "micro_f1_ci_low": 0.9208565611388392,
+      "micro_f1_ci_high": 0.9343365340862083,
+      "macro_f1_diff_vs_reference": 0.5744980307005645,
+      "diff_ci_low": 0.558610274280857,
+      "diff_ci_high": 0.5893851653030117,
+      "share_of_resamples_not_better": 0.0
+    },
+    {
+      "system": "QARiB int8 (CPU) (reported cutoff)",
+      "macro_f1": 0.9082155311376297,
+      "macro_f1_ci_low": 0.8996886730603522,
+      "macro_f1_ci_high": 0.9164207630477423,
+      "micro_f1": 0.9178958360527346,
+      "micro_f1_ci_low": 0.9104122615144034,
+      "micro_f1_ci_high": 0.92471727135525,
+      "macro_f1_diff_vs_reference": 0.5620655598066855,
+      "diff_ci_low": 0.5458431586908211,
+      "diff_ci_high": 0.5776891668588975,
+      "share_of_resamples_not_better": 0.0
+    }
+  ]
+}

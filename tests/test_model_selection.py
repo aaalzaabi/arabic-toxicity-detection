@@ -95,7 +95,7 @@ def test_model_selection_uses_saved_metrics_and_excludes_jais(tmp_path):
     card = scorecard(table)
     assert card.loc[card.Dimension == "Macro-F1", "QARiB"].iloc[0] == "0.904"
     assert "ethical_score" not in card.columns
-    assert "evaluation pending" in JAIS_STATUS
+    assert "not in this scorecard" in JAIS_STATUS
     assert "ethical_score =" not in inspect.getsource(model_selection)
     assert "0.4 *" not in inspect.getsource(model_selection)
 

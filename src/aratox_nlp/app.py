@@ -805,7 +805,10 @@ def final_results_view():
             "- Tuning cutoffs per label made TF-IDF slightly worse on both validation and test. Treat tuned cutoffs as a policy choice, not a free gain.\n"
             "- int8 QARiB stays within about 0.006 Macro-F1 of the full model at half the size."
         )
-        st.caption(results["jais"])
+        if (final / "jais_test_results.json").is_file():
+            st.caption("Jais-2 was frozen separately (prompt mode chosen on validation) and scored on the full test split; see the Jais-2 section below.")
+        else:
+            st.caption(results["jais"])
 
     jais_view(final, metrics)
 

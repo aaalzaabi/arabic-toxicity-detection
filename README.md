@@ -190,7 +190,7 @@ Research questions:
 - Does the model with the highest predictive performance also provide acceptable error behavior for a human-reviewed moderation setting?
 - How do different decision thresholds change the trade-off between false positives and missed toxic content?
 
-Three QARiB analysis policies are read from the saved threshold table: reported / balanced at 0.50, an exploratory F1-focused point at 0.65, and a precision-focused review point at 0.80. They do not change the trained model or replace the reported 0.50 result. Jais-2-8B-Chat is integrated, and a full validation evaluation is still pending, so it is not in the main scorecard.
+Three QARiB analysis policies are read from the saved threshold table: reported / balanced at 0.50, an exploratory F1-focused point at 0.65, and a precision-focused review point at 0.80. They do not change the trained model or replace the reported 0.50 result. Jais-2-8B-Chat was evaluated separately as a prompted LLM (see Final evaluation below); it is not in the validation scorecard of trained models.
 
 Predicted dialect supports an exploratory false-positive distribution by predicted region. That table is not a dialect fairness audit.
 
@@ -237,6 +237,7 @@ just final-test     # scores test once; refuses to run twice or if a frozen file
 | QARiB int8 (CPU), 0.50 | 0.908 [0.900, 0.916] | 264 |
 | TF-IDF + Linear SVM, reported cutoff | 0.904 [0.895, 0.912] | 294 |
 | TF-IDF + Linear SVM, tuned cutoffs | 0.899 [0.890, 0.907] | 327 |
+| Jais-2-8B-Chat, zero-shot prompt (no training) | 0.346 [0.333, 0.359] | — |
 
 - QARiB vs TF-IDF: +0.010 [+0.003, +0.018] on test (+0.013 [+0.006, +0.020] on validation). The gain is small but not noise.
 - Ensemble vs QARiB: +0.007 [+0.002, +0.012], with the fewest false positives.
@@ -247,7 +248,18 @@ just final-test     # scores test once; refuses to run twice or if a frozen file
 
 The Streamlit app adds a **Final Results** tab, an ensemble option, a calibrated "Tuned per label" cutoff, word-occlusion highlighting ("Why this decision?"), CSV batch scoring, and a blind dialect spot-check on the Dialect Analysis tab. Word highlights show sensitivity, not the model's reasoning.
 
-**Jais-2** is gated on Hugging Face. Log in (`hf auth login`), accept the model terms on its page, then run `just jais-validation`. The loader now uses bfloat16 on Apple GPUs so the 8B model fits in memory. Jais is not part of the frozen test run; choose zero- or few-shot on validation, then score test once for the chosen mode.
+**Jais-2** (prompted, no training) was frozen and scored separately:
+
+| Jais-2 prompt | Validation Macro-F1 (500 rows) | Unparseable answers | Median s / comment |
+|---|---:|---:|---:|
+| **Zero-shot (chosen)** | **0.369** | 1.6% | 2.6 |
+| Few-shot (3 examples) | 0.129 | 0.6% | 3.5 |
+
+- On the **full test split** (3,670 rows) zero-shot Jais-2 scores **0.346 [0.333, 0.359]** Macro-F1, 0.7% unparseable, about 2.8 s per comment. Every trained system beats it by +0.55 to +0.57 (95% CIs well above zero) on the same rows.
+- Per-label test F1: Cussing 0.67, Sexual 0.56, Hatred 0.37, Racial 0.26, Violence 0.19, Appearance 0.03. The prompt names the labels but does not define them, so the model has no way to learn AraTox's notion of, for example, Appearance.
+- The few-shot prompt used only three toxic examples (the first training row for Appearance, Cussing and Hatred), with no non-toxic example and no label definitions. Its weak result describes this prompt, not few-shot prompting in general.
+- An earlier test run scored only the first 500 test rows. The official test file is ordered by label, so that slice had no Hatred, Racial or Violence examples and its scores were meaningless. It changed no decision and is kept in `outputs/final/invalid_first500_test/`.
+- Reproduce: `hf auth login`, accept the model terms on its Hugging Face page, then `just jais-validation`, `uv run python scripts/jais_final.py select` and `uv run python scripts/jais_final.py test`. The loader uses bfloat16 on Apple GPUs (fp16 produced empty output) so the 8B model fits in memory.
 
 ## Data and acknowledgements
 
